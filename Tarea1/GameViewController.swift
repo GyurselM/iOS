@@ -62,6 +62,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func OnButtonTap(_ sender: UIButton) {
+        //For donde pulsamos los botones, los pone en enabled-false y añade en la lista de playerSequence
         for i in 0 ..< Buttons.count{
             if Buttons[i] == sender{
                 Buttons[i].isEnabled = false
