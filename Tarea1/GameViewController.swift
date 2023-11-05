@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     @IBOutlet var ImageStackView: UIStackView!
     @IBOutlet var MainImageView: UIImageView!
     @IBOutlet var ButtonPuntuationView: UIButton!
-    
+    // Boton para saltar a una vista donde esta la puntuacion
     @IBAction func PuntuationView(_ sender: Any) {
         
         performSegue(withIdentifier: "toPuntuation", sender: nil)
