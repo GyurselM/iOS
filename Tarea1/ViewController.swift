@@ -14,9 +14,11 @@ class ViewController: UIViewController {
         //Comprobamos que en el campo este el nombre para poder dar al boton
         let userName = NameTextField.text
         if userName?.isEmpty == false {
+            //Pasar a la siguiente vista
             performSegue(withIdentifier: "toGame", sender: nil)
-        }else{
-            //Guardar el user name
+            
+            //Guardar el user name en UserDefaults
+            userDefaults.set(userName, forKey: "Name")
         }
     }
     
