@@ -32,7 +32,7 @@ class GameViewController: UIViewController {
         performSegue(withIdentifier: "toPuntuation", sender: nil)
         
     }
-    
+    // Override donde encender/apagar botones e imagenes, llamada de timer y dar valores, llamar showNextImage
     override func viewDidLoad() {
            super.viewDidLoad()
         
