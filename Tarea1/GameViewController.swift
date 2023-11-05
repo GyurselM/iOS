@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
             MainImageView.isHidden = true
             return
         }
-    
+        //Muesta las imagenes que todavia no han salido y suma mas 1 al currentIndex
         ImageView.image = imagenes[numShuffle[currentIndex]]
         print(currentIndex)
         currentIndex += 1
