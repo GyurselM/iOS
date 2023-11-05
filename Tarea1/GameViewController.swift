@@ -47,9 +47,9 @@ class GameViewController: UIViewController {
     }
     
     @objc func showNextImage() {
+        //Compara el index con la lista de shuffle
         if currentIndex == numShuffle.count {
-            // Todas las imágenes se han mostrado
-            timer.invalidate() // Detener el temporizador
+            timer.invalidate() //Detener el temporizador
             ImageStackView.isHidden = false
             MainImageView.isHidden = true
             return
