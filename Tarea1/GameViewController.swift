@@ -76,7 +76,7 @@ class GameViewController: UIViewController {
     }
     
     func puntuation(){
-        
+        //For donde cunta los aciertos que se hace cuando se pulsa los botones
         for i in 0 ..< playerSequence.count {
             if numShuffle[i] == playerSequence[i]{
                 score += 20
