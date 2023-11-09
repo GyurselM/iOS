@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     
     let imagenes = [UIImage(named: "Rayo"),UIImage(named: "Azul"),UIImage(named: "Amarillo"),UIImage(named: "Xocas")]
     let num = [0, 1, 2, 3]
+    let scorePuntuation = UserDefaults.standard
     
     var numShuffle: [Int] = []
     var currentIndex = 0
@@ -70,24 +71,35 @@ class GameViewController: UIViewController {
                 
             }
             ButtonPuntuationView.isEnabled = true
+            
         }
-        print(playerSequence)
-        
+        puntuation()
+        print("Secuencia del Jugador: ",playerSequence)
+                
     }
     
     func puntuation(){
-        //For donde cunta los aciertos que se hace cuando se pulsa los botones
-        for i in 0 ..< playerSequence.count {
-            if numShuffle[i] == playerSequence[i]{
-                score += 20
-                print(score)
-            }else{
-                score -= 5
-                print(score)
+        
+        guard numShuffle.count == playerSequence.count else {
+                return
             }
-        }
+        print("NumShuffle: " , numShuffle)
+        //For donde cunta los aciertos que se hace cuando se pulsa los botones
+           for i in 0..<min(playerSequence.count, numShuffle.count){
+               if playerSequence[i] == numShuffle[i] {
+                   score += 10
+                    print("Puntuacion positivo: ",score)
+               } else {
+                   score -= 5
+                    print("Puntuacion negativa: ",score)
+               }
+           }
+            // Guarda la puntuación en UserDefaults
+            scorePuntuation.set(score, forKey: "Puntuation")
+            print("Puntuacion final: ",score)
         
     }
+    
 }
 
 
