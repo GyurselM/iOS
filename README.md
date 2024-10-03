@@ -1,4 +1,4 @@
-# Tarea1-iOS
+# Proyecto iOS
 ## Explicacion del proyecto
   Esta tarea consiste en hacer un juego en iOS que es Memorizar imagenes y poner la respuesta correcta y con una puntuacion
 
